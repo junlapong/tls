@@ -6,8 +6,8 @@ PORT=$2
 if ! command -v sslyze &> /dev/null
 then
     echo "sslyze could not be found"
-    echo "Homebrew: brew install sslyze"
     echo "  Python: pip install sslyze"
+    echo "see: https://github.com/nabla-c0d3/sslyze#quick-start"
     exit
 fi
 
@@ -16,6 +16,6 @@ then
     PORT=443
 fi
 
-sslyze --regular ${HOST}:${PORT}
+sslyze ${HOST}:${PORT}
 
 ### EOF ###
